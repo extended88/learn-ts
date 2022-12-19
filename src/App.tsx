@@ -109,6 +109,66 @@ let comp2:string = comp1;
 
 let comp3: string = "test";
 
+let funcComp1 = (x:number) => {};
+
+let funcComp2 = (x:string) => {};
+
+interface GEN<T>{
+  item: T;
+};
+
+const gen0: GEN<string> = { 
+  item: "hello"
+};
+
+interface GEN1<T=string>{
+  item: T;
+};
+
+const gen1: GEN1 = { 
+  item: "hello"
+};
+
+
+interface GEN2<T extends string | number>{
+  item: T;
+};
+
+const gen2: GEN2<number> = { 
+  item: 0
+};
+
+function funcGen<T>(props: T) {
+  return { item: props};
+}
+
+const gen3 = funcGen<string>("あああ");
+const gen4 = funcGen<string | null >(null);
+
+function funcGen2<T extends string | null>(props: T){
+  return { value: props };
+}
+
+const gen9 = funcGen2("aaa");
+
+interface Props {
+  price: number;
+}
+
+function funcGen3<T extends Props>(props: T){
+  return{
+    value: props.price
+  };
+}
+
+const gen10 = funcGen3({price:1});
+
+const fucGen4 = <T extends Props>(props: T) => {
+  return{
+    value: props.price
+  };
+}
+
 function App(): JSX.Element {
   return (
     <div className="App">
