@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Data from './data.json';
 
 const name: string = "hello";
 let name2: string = "good";
