@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Data from './data.json';
+import TestCompornet from './TestCompornet';
 
 type USERS = typeof Data;
 
@@ -172,12 +173,12 @@ const fucGen4 = <T extends Props>(props: T) => {
   };
 }
 
-function App(): JSX.Element {
+const App:React.FC = () => {
   return (
     <div className="App">
-      {//<div>header className="App-header"></header>
-      }
-      <p>{ msg2 }</p>
+      <header className="App-header">
+        <p><TestCompornet text="hello world" /></p>
+      </header>
     </div>
   );
 }
