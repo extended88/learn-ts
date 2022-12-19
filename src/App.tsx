@@ -72,7 +72,7 @@ function App() {
     <div className="App">
       {//<div>header className="App-header"></header>
       }
-      <p>{ userA['city'] }</p>
+      <p>{ msg2 }</p>
     </div>
   );
 }
