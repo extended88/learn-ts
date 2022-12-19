@@ -24,14 +24,55 @@ const abc = (x:number, y:number): number => {
   return x + y;
 }
 
-const ans = abc(1, 2)
+const ans = abc(1, 2);
+
+type PROFILE = {
+  age: number;
+  city: string;
+};
+
+type LOGIN = {
+  username: string;
+  password: string;
+}
+
+type USER = PROFILE & LOGIN;
+
+const userA:USER = {
+  age: 39,
+  city: "Tokyo",
+  username: "Taro",
+  password: "zzxxcc"
+}
+
+let value: boolean | number;
+value = 10;
+
+let arrayUni: (number | string) [];
+
+arrayUni = [0, "aabbbvv"];
+
+let compay: "Facebook" | "Google" | "Amazon";
+compay = "Google";
+
+let memory: 256 | 512;
+memory = 256; 
+
+let msg: string = "Hi";
+let msg2: typeof msg;
+
+msg2 = "aaa";
+
+let animal = { cat: "small cat" };
+let newAnimal: typeof animal = { cat: "big cat" };
+
 
 function App() {
   return (
     <div className="App">
       {//<div>header className="App-header"></header>
       }
-      <p>{ ans }</p>
+      <p>{ userA['city'] }</p>
     </div>
   );
 }
