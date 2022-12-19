@@ -66,8 +66,50 @@ msg2 = "aaa";
 let animal = { cat: "small cat" };
 let newAnimal: typeof animal = { cat: "big cat" };
 
+type KYES = {
+  primary: string;
+  secondary: string;
+};
 
-function App() {
+let key: keyof KYES
+key = "primary";
+
+const SPORTS = {
+  soccer: "Soccer",
+  bassball: "Baseball"
+};
+
+let keySports: keyof typeof SPORTS;
+
+keySports = "soccer";
+
+enum OS {
+  Windows,
+  Mac,
+  Linux
+};
+
+interface PC {
+  id: number,
+  OSType: OS
+};
+
+const pc1:PC = {
+  id: 1,
+  OSType: OS.Windows
+};
+
+const pc2:PC = {
+  id: 2,
+  OSType: OS.Mac
+};
+
+const comp1 = "test";
+let comp2:string = comp1;
+
+let comp3: string = "test";
+
+function App(): JSX.Element {
   return (
     <div className="App">
       {//<div>header className="App-header"></header>
