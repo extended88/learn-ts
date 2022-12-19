@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Data from './data.json';
 
+type USERS = typeof Data;
+
 const name: string = "hello";
 let name2: string = "good";
 name2 = "good by";
